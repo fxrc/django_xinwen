@@ -1,0 +1,17 @@
+{% extends "xinwen/base.html" %}
+
+{% block content %}
+
+  <p>Titles:{{title}}</p>
+
+  <ul>
+    {% for content in contents %}
+      <li>
+        <p>{{ content.text|linebreaks}}</p>
+      </li>
+    {% empty %}
+      <li>empty</li>
+    {% endfor %}
+  </ul>
+
+{% endblock content %}
